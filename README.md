@@ -8,20 +8,20 @@ Each skill is its own repository — clone this repo with `--recursive` to get e
 
 | Skill | Description | Status |
 |-------|-------------|--------|
-| [omc-agency](https://github.com/amitvijaput/omc-agency) | Orchestrate 150+ specialist agents with OMC patterns (ralplan, autopilot, team) | Active |
+| [omc-agency](https://github.com/amitvijapur/omc-agency) | Orchestrate 150+ specialist agents with OMC patterns (ralplan, autopilot, team) | Active |
 
 ## Quick start
 
 ### Clone everything
 
 ```bash
-git clone --recursive https://github.com/amitvijaput/claude-skills.git
+git clone --recursive https://github.com/amitvijapur/claude-skills.git
 ```
 
 ### Clone a single skill
 
 ```bash
-git clone https://github.com/amitvijaput/omc-agency.git
+git clone https://github.com/amitvijapur/omc-agency.git
 ```
 
 ### Install a skill
@@ -43,7 +43,7 @@ cp omc-agency/SKILL.md ~/.claude/skills/omc-agency/
 
 ## About
 
-Built by [Amit](https://github.com/amitvijaput) — CS student at Durham University, building agentic AI tooling and financial research systems.
+Built by [Amit](https://github.com/amitvijapur) — CS student at Durham University, building agentic AI tooling and financial research systems.
 
 ## Licence
 
