@@ -9,6 +9,7 @@ Each skill is its own repository — clone this repo with `--recursive` to get e
 | Skill | Description | Built on | Status |
 |-------|-------------|----------|--------|
 | [omc-agency](https://github.com/amitvijapur/omc-agency) | Orchestrate 150+ specialist agents with OMC patterns (ralplan, autopilot, team) | [Oh My Claude Code](https://github.com/Yeachan-Heo/oh-my-claudecode) + [Agency Agents](https://github.com/msitarzewski/agency-agents) | Active |
+| [skill-auditor](https://github.com/amitvijapur/skill-auditor) | Audit candidate skills for redundancy, routing conflicts and trigger collisions before installing | — | Active |
 
 ## Quick start
 
@@ -22,6 +23,7 @@ git clone --recursive https://github.com/amitvijapur/claude-skills.git
 
 ```bash
 git clone https://github.com/amitvijapur/omc-agency.git
+git clone https://github.com/amitvijapur/skill-auditor.git
 ```
 
 ### Install a skill
@@ -29,8 +31,9 @@ git clone https://github.com/amitvijapur/omc-agency.git
 Copy the skill's `SKILL.md` (and any supporting files) to your Claude Code skills directory:
 
 ```bash
-mkdir -p ~/.claude/skills/omc-agency
-cp omc-agency/SKILL.md ~/.claude/skills/omc-agency/
+# Example: install skill-auditor
+mkdir -p ~/.claude/skills/skill-auditor
+cp -r skill-auditor/SKILL.md skill-auditor/scripts/ ~/.claude/skills/skill-auditor/
 ```
 
 ## Upcoming skills
