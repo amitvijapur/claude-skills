@@ -8,7 +8,7 @@ Each skill is its own repository — clone this repo with `--recursive` to get e
 
 | Skill | Description | Built on | Status |
 |-------|-------------|----------|--------|
-| [orchestrator](https://github.com/amitvijapur/orchestrator) | Generate ready-to-paste Claude Code prompts — agent selection, orchestration patterns, loops, eval-first workflows | [OMC](https://github.com/Yeachan-Heo/oh-my-claudecode) + [Agency](https://github.com/msitarzewski/agency-agents) + [ECC](https://github.com/affaan-m/everything-claude-code) | Active |
+| [orchestrator](https://github.com/amitvijapur/orchestrator) | Generate ready-to-paste Claude Code prompts — 9 orchestration patterns, loop safety, swarm coordination, multi-model review, sentinel gates | [OMC](https://github.com/Yeachan-Heo/oh-my-claudecode) + [Agency](https://github.com/msitarzewski/agency-agents) + [ECC](https://github.com/affaan-m/everything-claude-code) + [ralph](https://github.com/frankbria/ralph-claude-code) + [Claude Flow](https://github.com/ruvnet/claude-flow) | Active |
 | [skill-auditor](https://github.com/amitvijapur/skill-auditor) | Audit candidate skills for redundancy, routing conflicts and trigger collisions before installing | — | Active |
 
 ## Quick start
