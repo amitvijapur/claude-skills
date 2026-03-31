@@ -1,6 +1,6 @@
-[submodule "omc-agency"]
-	path = omc-agency
-	url = https://github.com/amitvijapur/orchestrator.git
 [submodule "skill-auditor"]
 	path = skill-auditor
 	url = https://github.com/amitvijapur/skill-auditor.git
+[submodule "orchestrator"]
+	path = orchestrator
+	url = https://github.com/amitvijapur/orchestrator.git
