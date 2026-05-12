@@ -11,7 +11,7 @@
 
   body {
     font-family: 'Inter', -apple-system, sans-serif;
-    background: #0a0a0f;
+    background: #0a0a0a;
     color: #e4e4e7;
     min-height: 100vh;
     padding: 60px 40px;
@@ -23,8 +23,8 @@
     position: fixed;
     inset: 0;
     background-image:
-      linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+      linear-gradient(rgba(255,255,255,0.012) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.012) 1px, transparent 1px);
     background-size: 40px 40px;
     pointer-events: none;
     z-index: 0;
@@ -47,7 +47,7 @@
     font-size: 52px;
     font-weight: 800;
     letter-spacing: -2px;
-    background: linear-gradient(135deg, #a78bfa, #818cf8, #6366f1);
+    background: linear-gradient(135deg, #fafafa, #d4d4d8 60%, #71717a);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 12px;
@@ -73,7 +73,7 @@
     content: '';
     width: 2px;
     height: 100%;
-    background: linear-gradient(to bottom, #6366f1, #6366f1 70%, rgba(99,102,241,0.3));
+    background: linear-gradient(to bottom, rgba(255,255,255,0.25), rgba(255,255,255,0.08));
   }
 
   .flow-connector .arrow {
@@ -84,7 +84,7 @@
     width: 0; height: 0;
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
-    border-top: 8px solid #6366f1;
+    border-top: 8px solid rgba(255,255,255,0.25);
   }
 
   /* Entry point */
@@ -94,13 +94,14 @@
   }
 
   .entry-box {
-    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    background: linear-gradient(135deg, #27272a, #3f3f46);
     padding: 16px 48px;
     border-radius: 50px;
     font-size: 17px;
     font-weight: 600;
-    color: white;
-    box-shadow: 0 0 40px rgba(99, 102, 241, 0.25);
+    color: #fafafa;
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.04);
   }
 
   /* Router */
@@ -109,8 +110,8 @@
   }
 
   .router-box {
-    background: rgba(99, 102, 241, 0.06);
-    border: 1px solid rgba(99, 102, 241, 0.2);
+    background: rgba(255,255,255,0.025);
+    border: 1px solid rgba(255,255,255,0.08);
     border-radius: 16px;
     padding: 28px 32px;
     max-width: 560px;
@@ -121,7 +122,7 @@
     font-size: 13px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #818cf8;
+    color: #a1a1aa;
     margin-bottom: 18px;
     text-align: center;
   }
@@ -142,14 +143,14 @@
     width: 26px;
     height: 26px;
     border-radius: 50%;
-    background: rgba(99, 102, 241, 0.15);
-    border: 1px solid rgba(99, 102, 241, 0.3);
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 11px;
     font-weight: 600;
-    color: #a5b4fc;
+    color: #d4d4d8;
     flex-shrink: 0;
   }
 
@@ -158,7 +159,7 @@
     color: #a1a1aa;
   }
 
-  .step-text strong { color: #d4d4d8; }
+  .step-text strong { color: #f4f4f5; }
 
   .step-tags {
     display: inline-flex;
@@ -172,8 +173,14 @@
     font-size: 10px;
     padding: 2px 7px;
     border-radius: 4px;
-    background: rgba(99, 102, 241, 0.12);
-    color: #a5b4fc;
+    background: rgba(255,255,255,0.05);
+    color: #d4d4d8;
+  }
+
+  .route-code {
+    color: #e4e4e7;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
   }
 
   /* Skip branch */
@@ -190,16 +197,16 @@
   .skip-line {
     width: 50px;
     height: 2px;
-    background: linear-gradient(to right, rgba(99,102,241,0.5), #71717a);
+    background: linear-gradient(to right, rgba(255,255,255,0.2), rgba(255,255,255,0.4));
   }
 
   .skip-box {
     padding: 8px 16px;
     border-radius: 8px;
-    background: rgba(113, 113, 122, 0.08);
-    border: 1px solid rgba(113, 113, 122, 0.2);
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
     font-size: 12px;
-    color: #71717a;
+    color: #a1a1aa;
     white-space: nowrap;
   }
 
@@ -224,11 +231,15 @@
     text-transform: uppercase;
     letter-spacing: 1.5px;
     flex-shrink: 0;
+    background: rgba(255,255,255,0.06);
+    color: #e4e4e7;
+    border: 1px solid rgba(255,255,255,0.12);
   }
 
   .tier-line {
     flex: 1;
     height: 1px;
+    background: linear-gradient(to right, rgba(255,255,255,0.18), transparent);
   }
 
   .tier-hint {
@@ -237,35 +248,6 @@
     flex-shrink: 0;
     font-style: italic;
   }
-
-  /* Tier colors */
-  .tier-orchestrators .tier-badge {
-    background: rgba(139, 92, 246, 0.15);
-    color: #a78bfa;
-    border: 1px solid rgba(139, 92, 246, 0.3);
-  }
-  .tier-orchestrators .tier-line { background: linear-gradient(to right, rgba(139,92,246,0.3), transparent); }
-
-  .tier-specialists .tier-badge {
-    background: rgba(6, 182, 212, 0.15);
-    color: #22d3ee;
-    border: 1px solid rgba(6, 182, 212, 0.3);
-  }
-  .tier-specialists .tier-line { background: linear-gradient(to right, rgba(6,182,212,0.3), transparent); }
-
-  .tier-quality .tier-badge {
-    background: rgba(239, 68, 68, 0.15);
-    color: #f87171;
-    border: 1px solid rgba(239, 68, 68, 0.3);
-  }
-  .tier-quality .tier-line { background: linear-gradient(to right, rgba(239,68,68,0.3), transparent); }
-
-  .tier-infra .tier-badge {
-    background: rgba(100, 116, 139, 0.15);
-    color: #94a3b8;
-    border: 1px solid rgba(100, 116, 139, 0.3);
-  }
-  .tier-infra .tier-line { background: linear-gradient(to right, rgba(100,116,139,0.3), transparent); }
 
   /* Cards grid */
   .tier-grid {
@@ -282,51 +264,47 @@
     padding: 22px;
     position: relative;
     overflow: hidden;
-    transition: transform 0.2s, box-shadow 0.2s;
+    background: rgba(255,255,255,0.025);
+    border: 1px solid rgba(255,255,255,0.06);
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
   }
 
+  /* Subtle accent edge — uses --card-color, the system identity color (diff feature) */
   .system-card::before {
     content: '';
     position: absolute;
     inset: 0;
     border-radius: 12px;
     padding: 1px;
-    background: linear-gradient(135deg, var(--card-color), transparent 50%);
+    background: linear-gradient(135deg, var(--card-color, rgba(255,255,255,0.3)), transparent 50%);
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
     pointer-events: none;
+    opacity: 0.7;
   }
 
   .system-card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    border-color: rgba(255,255,255,0.12);
   }
 
-  /* Card color variants */
-  .card-omc { --card-color: #8b5cf6; background: rgba(139, 92, 246, 0.05); }
-  .card-gsd { --card-color: #f59e0b; background: rgba(245, 158, 11, 0.05); }
-  .card-ecc { --card-color: #10b981; background: rgba(16, 185, 129, 0.05); }
-  .card-agents { --card-color: #06b6d4; background: rgba(6, 182, 212, 0.05); }
-  .card-tessl { --card-color: #f97316; background: rgba(249, 115, 22, 0.05); }
-  .card-design { --card-color: #ec4899; background: rgba(236, 72, 153, 0.05); }
-  .card-adv { --card-color: #ef4444; background: rgba(239, 68, 68, 0.05); }
-  .card-devtools { --card-color: #14b8a6; background: rgba(20, 184, 166, 0.05); }
-  .card-cloud { --card-color: #3b82f6; background: rgba(59, 130, 246, 0.05); }
-  .card-mcp { --card-color: #64748b; background: rgba(100, 116, 139, 0.05); }
-  .card-graphify { --card-color: #a78bfa; background: rgba(167, 139, 250, 0.05); }
-  .card-domain { --card-color: #84cc16; background: rgba(132, 204, 22, 0.05); }
-
-  .card-graphify .system-icon { background: rgba(167,139,250,0.2); color: #c4b5fd; }
-  .card-domain .system-icon { background: rgba(132,204,22,0.2); color: #bef264; }
-
-  /* Domain models tier */
-  .tier-domain .tier-badge {
-    background: rgba(132, 204, 22, 0.15);
-    color: #a3e635;
-    border: 1px solid rgba(132, 204, 22, 0.3);
-  }
-  .tier-domain .tier-line { background: linear-gradient(to right, rgba(132,204,22,0.3), transparent); }
+  /* Card identity — only --card-color survives. Backgrounds are unified mono. */
+  .card-omc      { --card-color: #8b5cf6; }
+  .card-gsd      { --card-color: #f59e0b; }
+  .card-ecc      { --card-color: #10b981; }
+  .card-agents   { --card-color: #06b6d4; }
+  .card-tessl    { --card-color: #f97316; }
+  .card-design   { --card-color: #ec4899; }
+  .card-adv      { --card-color: #ef4444; }
+  .card-devtools { --card-color: #14b8a6; }
+  .card-cloud    { --card-color: #3b82f6; }
+  .card-mcp      { --card-color: #94a3b8; }
+  .card-graphify { --card-color: #a78bfa; }
+  .card-domain   { --card-color: #84cc16; }
+  .card-finance  { --card-color: #eab308; }
+  .card-video    { --card-color: #d946ef; }
 
   .card-header {
     display: flex;
@@ -335,6 +313,7 @@
     margin-bottom: 10px;
   }
 
+  /* System icons keep their color — these ARE the diff features */
   .system-icon {
     width: 34px;
     height: 34px;
@@ -347,16 +326,20 @@
     flex-shrink: 0;
   }
 
-  .card-omc .system-icon { background: rgba(139,92,246,0.2); color: #c4b5fd; }
-  .card-gsd .system-icon { background: rgba(245,158,11,0.2); color: #fcd34d; }
-  .card-ecc .system-icon { background: rgba(16,185,129,0.2); color: #6ee7b7; }
-  .card-agents .system-icon { background: rgba(6,182,212,0.2); color: #67e8f9; }
-  .card-tessl .system-icon { background: rgba(249,115,22,0.2); color: #fdba74; }
-  .card-design .system-icon { background: rgba(236,72,153,0.2); color: #f9a8d4; }
-  .card-adv .system-icon { background: rgba(239,68,68,0.2); color: #fca5a5; }
-  .card-devtools .system-icon { background: rgba(20,184,166,0.2); color: #5eead4; }
-  .card-cloud .system-icon { background: rgba(59,130,246,0.2); color: #93c5fd; }
-  .card-mcp .system-icon { background: rgba(100,116,139,0.2); color: #94a3b8; }
+  .card-omc      .system-icon { background: rgba(139,92,246,0.18);  color: #c4b5fd; }
+  .card-gsd      .system-icon { background: rgba(245,158,11,0.18);  color: #fcd34d; }
+  .card-ecc      .system-icon { background: rgba(16,185,129,0.18);  color: #6ee7b7; }
+  .card-agents   .system-icon { background: rgba(6,182,212,0.18);   color: #67e8f9; }
+  .card-tessl    .system-icon { background: rgba(249,115,22,0.18);  color: #fdba74; }
+  .card-design   .system-icon { background: rgba(236,72,153,0.18);  color: #f9a8d4; }
+  .card-adv      .system-icon { background: rgba(239,68,68,0.18);   color: #fca5a5; }
+  .card-devtools .system-icon { background: rgba(20,184,166,0.18);  color: #5eead4; }
+  .card-cloud    .system-icon { background: rgba(59,130,246,0.18);  color: #93c5fd; }
+  .card-mcp      .system-icon { background: rgba(148,163,184,0.18); color: #cbd5e1; }
+  .card-graphify .system-icon { background: rgba(167,139,250,0.18); color: #c4b5fd; }
+  .card-domain   .system-icon { background: rgba(132,204,22,0.18);  color: #bef264; }
+  .card-finance  .system-icon { background: rgba(234,179,8,0.18);   color: #fde047; }
+  .card-video    .system-icon { background: rgba(217,70,239,0.18);  color: #f0abfc; }
 
   .card-titles {
     display: flex;
@@ -378,7 +361,7 @@
 
   .system-desc {
     font-size: 12px;
-    color: #71717a;
+    color: #a1a1aa;
     line-height: 1.5;
     margin-bottom: 14px;
   }
@@ -419,7 +402,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: #0a0a0f;
+    background: #0a0a0a;
     padding: 2px 12px;
     font-size: 10px;
     text-transform: uppercase;
@@ -470,10 +453,11 @@
     letter-spacing: 3px;
     margin-bottom: 22px;
     font-weight: 600;
+    color: #a1a1aa;
   }
 
-  .section-title.pink { color: #ec4899; }
-  .section-title.gray { color: #52525b; }
+  .section-title.pink,
+  .section-title.gray { color: #a1a1aa; }
 
   .pipeline-flow {
     display: flex;
@@ -492,8 +476,8 @@
     gap: 6px;
     padding: 14px 12px;
     border-radius: 10px;
-    background: rgba(236, 72, 153, 0.04);
-    border: 1px solid rgba(236, 72, 153, 0.1);
+    background: rgba(255,255,255,0.025);
+    border: 1px solid rgba(255,255,255,0.06);
     min-width: 96px;
     text-align: center;
   }
@@ -502,7 +486,7 @@
     font-size: 9px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #f9a8d4;
+    color: #a1a1aa;
     font-weight: 600;
   }
 
@@ -534,7 +518,7 @@
 
   .combo-ex {
     background: rgba(255,255,255,0.02);
-    border: 1px solid rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.06);
     border-radius: 10px;
     padding: 14px 16px;
   }
@@ -542,13 +526,13 @@
   .combo-code {
     font-family: 'JetBrains Mono', monospace;
     font-size: 11px;
-    color: #a5b4fc;
+    color: #e4e4e7;
     margin-bottom: 4px;
   }
 
   .combo-desc {
     font-size: 11px;
-    color: #52525b;
+    color: #71717a;
   }
 
   /* Infra bar */
@@ -572,17 +556,18 @@
     color: #71717a;
   }
 
+  /* Per-MCP identity dots — these stay colored, they're the diff features */
   .infra-dot {
     width: 7px;
     height: 7px;
     border-radius: 50%;
   }
 
-  .dot-context7 { background: #22d3ee; }
-  .dot-exa { background: #a78bfa; }
+  .dot-context7  { background: #22d3ee; }
+  .dot-exa       { background: #a78bfa; }
   .dot-firecrawl { background: #f97316; }
-  .dot-supabase { background: #10b981; }
-  .dot-slack { background: #e879f9; }
+  .dot-supabase  { background: #10b981; }
+  .dot-slack     { background: #e879f9; }
 
   /* Decision shortcuts */
   .shortcuts-section {
@@ -604,18 +589,18 @@
     padding: 8px 14px;
     border-radius: 7px;
     background: rgba(255,255,255,0.015);
-    border: 1px solid rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.04);
   }
 
   .shortcut-task {
     font-size: 12px;
-    color: #71717a;
+    color: #a1a1aa;
     min-width: 130px;
     flex-shrink: 0;
   }
 
   .shortcut-arrow-sm {
-    color: #27272a;
+    color: #3f3f46;
     font-size: 11px;
     flex-shrink: 0;
   }
@@ -623,7 +608,7 @@
   .shortcut-route {
     font-family: 'JetBrains Mono', monospace;
     font-size: 10px;
-    color: #818cf8;
+    color: #d4d4d8;
   }
 
   /* Footer */
@@ -631,12 +616,12 @@
     text-align: center;
     margin-top: 56px;
     padding-top: 28px;
-    border-top: 1px solid rgba(255,255,255,0.04);
-    color: #27272a;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    color: #3f3f46;
     font-size: 11px;
   }
 
-  /* How tiers connect - visual annotation */
+  /* How tiers connect — visual annotation */
   .tier-relationship {
     display: flex;
     align-items: center;
@@ -664,8 +649,56 @@
     font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #3f3f46;
+    color: #52525b;
     padding: 0 8px;
+  }
+
+  /* Native + Self-learning section helpers — pure mono */
+  .mono-section-title { color: #d4d4d8 !important; }
+
+  .mono-block-desc {
+    text-align: center;
+    font-size: 12px;
+    color: #71717a;
+    max-width: 680px;
+    margin: 0 auto 20px auto;
+    line-height: 1.5;
+  }
+
+  .mono-block-desc code {
+    color: #e4e4e7;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+  }
+
+  .mono-combo-ex {
+    border-color: rgba(255,255,255,0.08) !important;
+    background: rgba(255,255,255,0.025) !important;
+  }
+
+  .phase-pill {
+    padding: 5px 12px;
+    border-radius: 50px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+  }
+
+  .phase-active {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #f4f4f5;
+  }
+
+  .phase-pending {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: #a1a1aa;
+  }
+
+  .phase-future {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.06);
+    color: #52525b;
   }
 
   @media (max-width: 900px) {
@@ -721,21 +754,37 @@
         </div>
         <div class="router-step">
           <div class="step-num">2</div>
-          <div class="step-text"><strong>Route</strong> &mdash; pick orchestrator</div>
+          <div class="step-text"><strong>Hint</strong> &mdash; <code class="route-code">cortex hint "&lt;task&gt;"</code> surfaces similar past routes weighted by outcome</div>
         </div>
         <div class="router-step">
           <div class="step-num">3</div>
-          <div class="step-text"><strong>Specialise</strong> &mdash; attach agents + skills</div>
+          <div class="step-text"><strong>Calibrate</strong> &mdash; pick tier L1&ndash;L4 (anti-inflation rule first: L3 must justify itself against L2)</div>
         </div>
         <div class="router-step">
           <div class="step-num">4</div>
-          <div class="step-text"><strong>Execute</strong> &mdash; <code style="color:#a5b4fc;font-family:'JetBrains Mono',monospace;font-size:11px">[Orchestrator] &gt; [Pattern] &gt; [Specialist]</code></div>
+          <div class="step-text"><strong>Route</strong> &mdash; pick orchestrator</div>
+        </div>
+        <div class="router-step">
+          <div class="step-num">5</div>
+          <div class="step-text"><strong>Specialise</strong> &mdash; attach agents + skills (fan out if &ge;2 domains)</div>
+        </div>
+        <div class="router-step">
+          <div class="step-num">6</div>
+          <div class="step-text"><strong>State + Log</strong> &mdash; <code class="route-code">cortex log-line "&hellip;" --confidence high|med|low</code></div>
+        </div>
+        <div class="router-step">
+          <div class="step-num">7</div>
+          <div class="step-text"><strong>Execute</strong> &mdash; listen for correction triggers (&ldquo;reroute&rdquo;, &ldquo;go back&rdquo;, &ldquo;switch to X&rdquo;&hellip;)</div>
+        </div>
+        <div class="router-step">
+          <div class="step-num">8</div>
+          <div class="step-text"><strong>Outcome</strong> &mdash; <code class="route-code">cortex outcome shipped|partial|abandoned</code> at task end &rarr; feeds Phase 3</div>
         </div>
       </div>
     </div>
     <div class="skip-branch">
       <div class="skip-line"></div>
-      <div class="skip-box">Trivial? &rarr; Direct Execution</div>
+      <div class="skip-box">Trivial? &rarr; Skip all (no hint, no log, no outcome)</div>
     </div>
   </div>
 
@@ -896,6 +945,63 @@
           <span class="pattern-tag">audit</span>
         </div>
       </div>
+      <!-- Anthropic Doc Skills -->
+      <div class="system-card card-mcp">
+        <div class="card-header">
+          <div class="system-icon">A</div>
+          <div class="card-titles">
+            <div class="system-name">Anthropic Skills</div>
+            <div class="system-subtitle">first-party docs + playbooks</div>
+          </div>
+        </div>
+        <div class="system-desc">Office-grade document creation that powers Claude.ai's native doc capabilities. Plus canonical playbooks for shipping MCPs and skills.</div>
+        <div class="system-patterns">
+          <span class="pattern-tag">docx</span>
+          <span class="pattern-tag">pdf</span>
+          <span class="pattern-tag">pptx</span>
+          <span class="pattern-tag">xlsx</span>
+          <span class="pattern-tag">mcp-builder</span>
+          <span class="pattern-tag">skill-creator</span>
+        </div>
+      </div>
+      <!-- Anthropic Financial Services -->
+      <div class="system-card card-finance">
+        <div class="card-header">
+          <div class="system-icon">$</div>
+          <div class="card-titles">
+            <div class="system-name">Anthropic Finance</div>
+            <div class="system-subtitle">financial-services-plugins</div>
+          </div>
+        </div>
+        <div class="system-desc">First-party finance plugins. Excel + PPT native. Pairs directly with Kronos and the doc skills above.</div>
+        <div class="system-patterns">
+          <span class="pattern-tag">financial-analysis</span>
+          <span class="pattern-tag">model-builder</span>
+          <span class="pattern-tag">pitch-agent</span>
+          <span class="pattern-tag">market-researcher</span>
+          <span class="pattern-tag">earnings-reviewer</span>
+          <span class="pattern-tag">meeting-prep-agent</span>
+        </div>
+      </div>
+      <!-- Hyperframes -->
+      <div class="system-card card-video">
+        <div class="card-header">
+          <div class="system-icon">H</div>
+          <div class="card-titles">
+            <div class="system-name">Hyperframes</div>
+            <div class="system-subtitle">HTML &rarr; MP4 video (HeyGen)</div>
+          </div>
+        </div>
+        <div class="system-desc">Write HTML, render video. Built for agents. GSAP timelines, Tailwind v4, Three.js/Lottie/Anime.js adapters. URL &rarr; promo, CSV &rarr; chart race, TTS narration with synced captions.</div>
+        <div class="system-patterns">
+          <span class="pattern-tag">/hyperframes</span>
+          <span class="pattern-tag">website-to-hyperframes</span>
+          <span class="pattern-tag">hyperframes-cli</span>
+          <span class="pattern-tag">hyperframes-media</span>
+          <span class="pattern-tag">gsap / tailwind</span>
+          <span class="pattern-tag">three / lottie / anime / waapi</span>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -1042,14 +1148,18 @@
           <div class="system-icon">M</div>
           <div class="card-titles">
             <div class="system-name">Core MCPs</div>
-            <div class="system-subtitle">docs, search, data</div>
+            <div class="system-subtitle">docs, search, data, code intel</div>
           </div>
         </div>
-        <div class="system-desc">Live documentation, AI-native web search, page extraction, database, and team comms.</div>
+        <div class="system-desc">Live docs, AI-native search, page extraction, anti-bot scraping, symbol-aware code intel, columnar analytics, OLTP, and team comms.</div>
         <div class="system-patterns">
           <span class="pattern-tag">Context7</span>
           <span class="pattern-tag">Exa</span>
           <span class="pattern-tag">Firecrawl</span>
+          <span class="pattern-tag">Scrapling</span>
+          <span class="pattern-tag">Serena</span>
+          <span class="pattern-tag">Morph</span>
+          <span class="pattern-tag">DuckDB</span>
           <span class="pattern-tag">Supabase</span>
           <span class="pattern-tag">Slack</span>
         </div>
@@ -1082,7 +1192,7 @@
   <!-- DESIGN PIPELINE -->
   <!-- ═══════════════════════════════════════ -->
   <div class="pipeline-section">
-    <div class="section-title pink">Design Pipeline (cross-tier example)</div>
+    <div class="section-title">Design Pipeline (cross-tier example)</div>
     <div class="pipeline-flow">
       <div class="pipeline-step">
         <div class="p-label">Setup</div>
@@ -1130,7 +1240,7 @@
   <!-- COMBO SYNTAX -->
   <!-- ═══════════════════════════════════════ -->
   <div class="combo-section">
-    <div class="section-title gray">Combo Syntax — How Layers Connect</div>
+    <div class="section-title">Combo Syntax — How Layers Connect</div>
     <div class="combo-examples">
       <div class="combo-ex">
         <div class="combo-code">Agent + OMC &rarr; ralplan "task"</div>
@@ -1155,7 +1265,7 @@
   <!-- DECISION SHORTCUTS -->
   <!-- ═══════════════════════════════════════ -->
   <div class="shortcuts-section">
-    <div class="section-title gray">Decision Shortcuts</div>
+    <div class="section-title">Decision Shortcuts</div>
     <div class="shortcuts-grid">
       <div class="shortcut-row">
         <div class="shortcut-task">Build backend</div>
@@ -1277,6 +1387,66 @@
         <div class="shortcut-arrow-sm">&rarr;</div>
         <div class="shortcut-route">Kronos &gt; predict / backtest</div>
       </div>
+      <div class="shortcut-row">
+        <div class="shortcut-task">Financial model (DCF / LBO / 3-stmt)</div>
+        <div class="shortcut-arrow-sm">&rarr;</div>
+        <div class="shortcut-route">Anthropic Finance &gt; model-builder + xlsx</div>
+      </div>
+      <div class="shortcut-row">
+        <div class="shortcut-task">Pitch deck end-to-end</div>
+        <div class="shortcut-arrow-sm">&rarr;</div>
+        <div class="shortcut-route">Anthropic Finance &gt; pitch-agent + pptx</div>
+      </div>
+      <div class="shortcut-row">
+        <div class="shortcut-task">Earnings analysis</div>
+        <div class="shortcut-arrow-sm">&rarr;</div>
+        <div class="shortcut-route">Anthropic Finance &gt; earnings-reviewer</div>
+      </div>
+      <div class="shortcut-row">
+        <div class="shortcut-task">Client meeting briefing</div>
+        <div class="shortcut-arrow-sm">&rarr;</div>
+        <div class="shortcut-route">Anthropic Finance &gt; meeting-prep + Granola</div>
+      </div>
+      <div class="shortcut-row">
+        <div class="shortcut-task">Word / PDF / PPT / Excel deliverable</div>
+        <div class="shortcut-arrow-sm">&rarr;</div>
+        <div class="shortcut-route">docx / pdf / pptx / xlsx auto-trigger</div>
+      </div>
+      <div class="shortcut-row">
+        <div class="shortcut-task">Build an MCP server</div>
+        <div class="shortcut-arrow-sm">&rarr;</div>
+        <div class="shortcut-route">mcp-builder skill + OMC &gt; ralplan</div>
+      </div>
+      <div class="shortcut-row">
+        <div class="shortcut-task">Build / edit a Claude skill</div>
+        <div class="shortcut-arrow-sm">&rarr;</div>
+        <div class="shortcut-route">skill-creator (eval-supported)</div>
+      </div>
+      <div class="shortcut-row">
+        <div class="shortcut-task">Video from URL</div>
+        <div class="shortcut-arrow-sm">&rarr;</div>
+        <div class="shortcut-route">Hyperframes &gt; website-to-hyperframes</div>
+      </div>
+      <div class="shortcut-row">
+        <div class="shortcut-task">Motion-graphics video</div>
+        <div class="shortcut-arrow-sm">&rarr;</div>
+        <div class="shortcut-route">Hyperframes + media (TTS / captions)</div>
+      </div>
+      <div class="shortcut-row">
+        <div class="shortcut-task">Symbol-aware refactor</div>
+        <div class="shortcut-arrow-sm">&rarr;</div>
+        <div class="shortcut-route">Serena MCP + OMC &gt; executor</div>
+      </div>
+      <div class="shortcut-row">
+        <div class="shortcut-task">Bot-walled scrape (Cloudflare)</div>
+        <div class="shortcut-arrow-sm">&rarr;</div>
+        <div class="shortcut-route">Scrapling MCP (Firecrawl fallback)</div>
+      </div>
+      <div class="shortcut-row">
+        <div class="shortcut-task">Parquet / CSV columnar query</div>
+        <div class="shortcut-arrow-sm">&rarr;</div>
+        <div class="shortcut-route">DuckDB MCP</div>
+      </div>
     </div>
   </div>
 
@@ -1284,32 +1454,32 @@
   <!-- NATIVE CLAUDE CODE SURFACE -->
   <!-- ═══════════════════════════════════════ -->
   <div class="combo-section">
-    <div class="section-title" style="color:#3b82f6;">Native Claude Code Surface</div>
-    <div style="text-align:center; font-size:12px; color:#71717a; max-width:680px; margin:0 auto 20px auto; line-height:1.5;">
+    <div class="section-title mono-section-title">Native Claude Code Surface</div>
+    <div class="mono-block-desc">
       Cross-surface session handoff, inbound event routing, cloud scheduling, and custom agent authoring &mdash; shipped with Claude Code, tier-agnostic plumbing.
     </div>
     <div class="combo-examples" style="grid-template-columns: repeat(3, 1fr); max-width: 960px;">
-      <div class="combo-ex" style="border-color: rgba(59,130,246,0.2); background: rgba(59,130,246,0.03);">
+      <div class="combo-ex mono-combo-ex">
         <div class="combo-code">Channels</div>
         <div class="combo-desc">Telegram / Discord / iMessage / webhooks → live session</div>
       </div>
-      <div class="combo-ex" style="border-color: rgba(59,130,246,0.2); background: rgba(59,130,246,0.03);">
+      <div class="combo-ex mono-combo-ex">
         <div class="combo-code">claude --teleport</div>
         <div class="combo-desc">Move a session terminal ↔ desktop ↔ web ↔ iOS</div>
       </div>
-      <div class="combo-ex" style="border-color: rgba(59,130,246,0.2); background: rgba(59,130,246,0.03);">
+      <div class="combo-ex mono-combo-ex">
         <div class="combo-code">Remote Control</div>
         <div class="combo-desc">Drive a local session from phone or browser</div>
       </div>
-      <div class="combo-ex" style="border-color: rgba(59,130,246,0.2); background: rgba(59,130,246,0.03);">
+      <div class="combo-ex mono-combo-ex">
         <div class="combo-code">/schedule (cloud)</div>
         <div class="combo-desc">Cron on Anthropic infra — runs when laptop is off</div>
       </div>
-      <div class="combo-ex" style="border-color: rgba(59,130,246,0.2); background: rgba(59,130,246,0.03);">
+      <div class="combo-ex mono-combo-ex">
         <div class="combo-code">/schedule (desktop)</div>
         <div class="combo-desc">Scheduled tasks with full local filesystem access</div>
       </div>
-      <div class="combo-ex" style="border-color: rgba(59,130,246,0.2); background: rgba(59,130,246,0.03);">
+      <div class="combo-ex mono-combo-ex">
         <div class="combo-code">Agent SDK</div>
         <div class="combo-desc">Custom agents when a skill isn't enough (L4)</div>
       </div>
@@ -1320,31 +1490,41 @@
   <!-- SELF-LEARNING LOOP -->
   <!-- ═══════════════════════════════════════ -->
   <div class="combo-section">
-    <div class="section-title" style="color:#a78bfa;">Self-Learning Loop</div>
-    <div style="text-align:center; font-size:12px; color:#71717a; max-width:680px; margin:0 auto 20px auto; line-height:1.5;">
-      Every routing decision writes a line to <code style="color:#a5b4fc; font-family:'JetBrains Mono',monospace; font-size:11px;">~/.claude/cortex-log.jsonl</code> with its reasoning trail.
-      Patterns surface automatically once the log has enough signal.
-      No retros, no ceremony &mdash; data-triggered learning.
+    <div class="section-title mono-section-title">Self-Learning Loop</div>
+    <div class="mono-block-desc">
+      Every routing decision writes a line to <code>~/.claude/cortex-log.jsonl</code> with its reasoning trail, Claude's <code>confidence</code>, and (at task end) an <code>outcome</code>. Patterns surface automatically once the log has enough signal. No retros, no ceremony &mdash; data-triggered learning.
     </div>
     <div class="combo-examples" style="grid-template-columns: repeat(3, 1fr);">
-      <div class="combo-ex" style="border-color: rgba(167,139,250,0.2); background: rgba(167,139,250,0.03);">
+      <div class="combo-ex mono-combo-ex">
+        <div class="combo-code">cortex hint "&lt;task&gt;"</div>
+        <div class="combo-desc">Phase 3 advisory &mdash; similar past routes weighted by outcome</div>
+      </div>
+      <div class="combo-ex mono-combo-ex">
+        <div class="combo-code">cortex outcome &lt;state&gt;</div>
+        <div class="combo-desc">shipped / partial / abandoned / corrected at task end</div>
+      </div>
+      <div class="combo-ex mono-combo-ex">
+        <div class="combo-code">cortex audit-tiers</div>
+        <div class="combo-desc">List L3/L4 routes &mdash; eyeball whether L2 would have worked</div>
+      </div>
+      <div class="combo-ex mono-combo-ex">
         <div class="combo-code">/cortex-log</div>
         <div class="combo-desc">Show last 20 routes with full reasoning</div>
       </div>
-      <div class="combo-ex" style="border-color: rgba(167,139,250,0.2); background: rgba(167,139,250,0.03);">
+      <div class="combo-ex mono-combo-ex">
         <div class="combo-code">/cortex-learn</div>
-        <div class="combo-desc">Detect repeating patterns, propose shortcuts</div>
+        <div class="combo-desc">Detect patterns, propose shortcuts (auto-skips actioned)</div>
       </div>
-      <div class="combo-ex" style="border-color: rgba(167,139,250,0.2); background: rgba(167,139,250,0.03);">
+      <div class="combo-ex mono-combo-ex">
         <div class="combo-code">/cortex-reroute "new route"</div>
-        <div class="combo-desc">Mark last route as corrected (Phase 4 signal)</div>
+        <div class="combo-desc">Mark last route as corrected &mdash; fires on natural triggers too</div>
       </div>
     </div>
-    <div style="display:flex; justify-content:center; gap:10px; flex-wrap:wrap; margin-top:20px; font-size:10px; font-family:'JetBrains Mono',monospace;">
-      <span style="padding:5px 12px; border-radius:50px; background:rgba(167,139,250,0.08); border:1px solid rgba(167,139,250,0.25); color:#c4b5fd;">Phase 1 · Visibility · ACTIVE</span>
-      <span style="padding:5px 12px; border-radius:50px; background:rgba(167,139,250,0.05); border:1px solid rgba(167,139,250,0.15); color:#a78bfa;">Phase 2 · Pattern surfacing · ~20 routes</span>
-      <span style="padding:5px 12px; border-radius:50px; background:rgba(100,116,139,0.06); border:1px solid rgba(100,116,139,0.2); color:#64748b;">Phase 3 · Similarity bias · ~200 routes</span>
-      <span style="padding:5px 12px; border-radius:50px; background:rgba(167,139,250,0.08); border:1px solid rgba(167,139,250,0.25); color:#c4b5fd;">Phase 4 · Correction capture · ACTIVE</span>
+    <div style="display:flex; justify-content:center; gap:10px; flex-wrap:wrap; margin-top:20px;">
+      <span class="phase-pill phase-active">Phase 1 · Visibility · ACTIVE</span>
+      <span class="phase-pill phase-active">Phase 2 · Pattern surfacing · ACTIVE</span>
+      <span class="phase-pill phase-active">Phase 3 · Similarity bias · ADVISORY</span>
+      <span class="phase-pill phase-active">Phase 4 · Outcome &amp; corrections · ACTIVE</span>
     </div>
   </div>
 
